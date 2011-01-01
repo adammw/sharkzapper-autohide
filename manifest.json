@@ -1,0 +1,14 @@
+{
+    "name": "sharkZapper AutoHide", 
+    "version": "1.0.0",
+    "description": "Automatically hide sharkZapper button when Grooveshark is not open",
+    "background_page": "html/background.html",
+    "icons": {
+        "128": "img/autohide_128.png"
+    },
+    "permissions": [
+        "management",
+        "tabs"
+    ],
+    "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD99rrNjIfjcFV5Rw+Kp4VqH/BgIM7F9ntlT3hdch/MyKoBVUbrMPT+mVxUfrQET7Zl7/xOU4xvQsziR+HCItcBzjWQX8+hkIftO/Q/re1bp5QX/Pt3bbKhFgaJrzoslWq5M+Oj/4IP3qIrGVjcckPGFcXgRvcv9fjlr0c6H0BzhwIDAQAB"
+}

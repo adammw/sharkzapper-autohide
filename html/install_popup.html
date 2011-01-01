@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>sharkZapper AutoHide</title>
+        <link rel="stylesheet" type="text/css" href="../css/popup.css" />
+        <script type="text/javascript">
+            var extensionId = 'glpmmhhbochnacgcjoeaononeeahghoa';    
+            
+            document.addEventListener('DOMContentLoaded',function(){
+                document.getElementById('installbtn').addEventListener('click',function() {
+                    // Work around linux bug #68369
+                    if (navigator.platform == 'Win32') {
+                        document.body.style.display = 'none';
+                        window.moveTo(0,0);
+                        window.resizeTo(window.screen.availWidth,window.screen.availHeight);
+                        location.href = this.getAttribute('href');
+                    } else {
+                        chrome.windows.create({url:this.getAttribute('href'), left: 0, top: 0, width: window.screen.availWidth, height: window.screen.availHeight});
+                        window.close();
+                    }
+                });
+                document.getElementById('disablebtn').addEventListener('click',function() {
+                    chrome.management.uninstall(extensionId);
+                });
+            });
+            window.resizeTo(600,180)
+            window.moveTo((window.screen.availWidth/2) - (600/2),(window.screen.availHeight / 2) - (180/2));
+        </script>
+    </head>
+    <body>
+        <div id="text">
+        <img class="logo" src="../img/sharkzapper_128.png" />
+        <h1>sharkZapper is not installed</h1>
+        <p><strong>sharkZapper</strong> is not installed but you have installed <strong>sharkZapper AutoHide</strong>.<br />
+        Do you want to install sharkZapper?</p>
+        </div>
+        <div id="buttons">
+            <button id="installbtn" class="green" href="https://chrome.google.com/webstore/detail/dcaneijaapiiojfmgmdjeapgpapbjohb">
+                Yes, Install sharkZapper
+            </button>
+            <button id="disablebtn" class="grey">
+                No, Uninstall sharkZapper AutoHide
+            </button>
+        </div>
+    </body>
+</html>
