@@ -1,6 +1,6 @@
 {
     "name": "sharkZapper AutoHide", 
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Automatically hide sharkZapper button when Grooveshark is not open",
     "background_page": "html/background.html",
     "icons": {
