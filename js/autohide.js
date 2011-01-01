@@ -126,7 +126,7 @@ chrome.extension.onRequestExternal.addListener(
                 sendResponse(true);
                 break;
             default:
-                if (debug) { console.warn('No handler for command:',request.command,request,sender);
+                if (debug) { console.warn('No handler for command:',request.command,request,sender); }
                 break;
         }
     }
