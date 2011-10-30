@@ -78,7 +78,7 @@ function sharkZapper_autoHide_tabRemoved(tabid) {
 
 function checkTabForGrooveshark(tab) {
     // Check if tab is Grooveshark
-    if (tab.url.indexOf('http://listen.grooveshark.com') == 0 || tab.url.indexOf('https://listen.grooveshark.com') == 0) {
+    if (tab.url.indexOf('http://grooveshark.com') == 0 || tab.url.indexOf('https://grooveshark.com') == 0) {
         if (debug) { console.log('Grooveshark Tab Open',tab.id); }
         if (!groovesharkTabId) {
             groovesharkTabId = tab.id;
